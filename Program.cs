@@ -19,10 +19,10 @@ string[] FillArray(string[] array1, int num)
     int count = 0;
     for (int i = 0; i < array1.Length; i++)
     {
-    if(array1[i].Length <= 3)
+        if (array1[i].Length <= 3)
         {
-        arr[count] = array1[i];
-        count++;
+            arr[count] = array1[i];
+            count++;
         }
     }
     return arr;
@@ -31,31 +31,31 @@ string[] FillArray(string[] array1, int num)
 // Считаем сколько слов в массиве удовлетворяют критерию отбора
 
 int WorldsLessThan(string[] input, int n)
+{
+    int count = 0;
+
+    for (int i = 0; i < input.Length; i++)
     {
-        int count = 0;
-
-        for (int i = 0; i < input.Length; i++)
+        if (input[i].Length <= 3)
         {
-            if (input[i].Length <= 3)
-            {
-                count++;
-            }
+            count++;
         }
-
-        return count;
     }
+
+    return count;
+}
 
 // Выводим массив в консоль
 
 void PrintArray(string[] arr)
+{
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write("[");
-        for (int i = 0; i < arr.Length; i++)
-        {
-            if (i < arr.Length - 1) Console.Write($"\"{arr[i]}\", ");
-            else Console.Write($"\"{arr[i]}\"] ");
-        }
+        if (i < arr.Length - 1) Console.Write($"\"{arr[i]}\", ");
+        else Console.Write($"\"{arr[i]}\"] ");
     }
+}
 Console.WriteLine("Введите количество символов для отбора: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
