@@ -22,3 +22,7 @@
 
 ["Russia", "Denmark", "Kazan"] -> []
 ```
+
+# Блок-схема основного метода
+
+![Block_Shem](Block_Shem.png)
